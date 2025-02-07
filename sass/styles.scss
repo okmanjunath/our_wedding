@@ -251,22 +251,20 @@ Navigation
 Hero
 ========================================================================== */
 .hero {
-  min-height: 750px;
-  background: url('../img/hero-min.jpg') center center;
+  min-height: 700px;
+  background: url('../img/coverr.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;  /* Ensures the image covers the entire width and height */
+  background-repeat: no-repeat; /* Prevents repetition of the image */
   position: relative;
 
-  /*.rsvp-btn {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-  }*/
   .down-arrow a {
     color: $txt-light;
   }
+
+
   h1 {
     color: $txt-light;
     margin-bottom: 40px;
@@ -277,8 +275,8 @@ Hero
     font-weight: 300;
     margin-bottom: 80px;
   }
-  .hero-content {
-    padding-top: 40%;
+.hero-content {
+    padding-top: 65%;
   }
   .hero-content img {
     width: 55%;
@@ -298,17 +296,22 @@ Hero
   width: 100%;
 }
 header {
-  padding: 50px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  padding: 45px 10px;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.2);
   position: relative;
   width: 1170px;
   margin: 0 auto;
   transition: padding 300ms ease-in-out;
+   background: rgba(0, 0, 0, 0.3); /* Subtle background for contrast */
+  border-radius: 20px; /* Adjust for roundness */
+
 
   a {
     color: $txt-light;
     text-transform: uppercase;
-    font-size: $nav-font-size;
+    font-size: 15px;
+    font-weight:400;	
+ text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow for readability */
 
     &.login {
       margin-right: 20px;
@@ -328,7 +331,7 @@ header {
       display: inline;
 
       a {
-        color: $txt-light;
+        color: #FFFFFF;
         padding-right: 25px;
 
         &:hover {
@@ -340,6 +343,14 @@ header {
       }
     }
   }
+  ul.member-actions li {
+  display: inline-block;
+  margin-right: 20px; /* Add space between the list items */
+}
+
+ul.member-actions li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
   ul.member-actions {
     li {
       display: inline;
@@ -358,8 +369,8 @@ header {
   }
   .member-actions {
     position: absolute;
-    right: 0;
-    top: 41px;
+    right: 100px;
+    top: 35px;
     transition: all 300ms ease-in-out;
   }
 }
@@ -367,11 +378,10 @@ header {
   color: #fff;
   font-size: 30px;
   position: absolute;
-  bottom: 30px;
+  bottom: 7px;
   left: 50%;
   transform: translateX(-50%);
 }
-
 /* ==========================================================================
 Social share buttons
 ========================================================================== */
@@ -788,13 +798,13 @@ Google map
 RSVP form
 ========================================================================== */
 .rsvp {
-  padding-bottom: 140px;
+  padding-bottom: 240px;
   .rsvp-form {
     .rsvp-btn {
       padding: 15px 0;
-      border-radius: 3px;
-      width: 100%;
-      font-size: 13px;
+      border-radius: 5px;
+      width: 130%;
+      font-size: 16px;
     }
     .form-input-group {
       width: 100%;
@@ -857,21 +867,31 @@ RSVP form
 Footer
 ========================================================================== */
 footer {
-  .content {
-    border-top: 1px solid $keyline-color;
-    padding-bottom: 20px;
+  text-align: center;
+  font-size: 14px; /* Keep it small but readable */
+  font-weight: 400; /* Medium weight for better visibility */
+  color: rgba(255, 255, 255, 0.7); /* Make text slightly more opaque */
+  background: rgba(0, 0, 0, 0.2); /* Add a subtle background for contrast */
+  padding: 5px 0; /* Give it some breathing space */
+  border-top: 1px solid rgba(255, 255, 255, 0.5); /* Keep it subtle */
+  height: auto; /* Auto height to fit content */
+  line-height: 10px;
+}
+
+/* Ensure full-width and no extra space */
+footer .container {
+  width: 100%;
+  max-width: none;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+  footer {
+    font-size: 12px;
   }
-  .to-top-wrapper {
-    font-size: 30px;
-    display: block;
-    cursor: pointer;
-    margin: -25px auto 50px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: 1px solid $keyline-color;
-    background: #fff;
-  }
+}
+
+
   .to-top-wrapper .to-top {
     display: block;
     -webkit-transition: all .3s ease-in-out;
@@ -888,7 +908,7 @@ footer {
     font-size: 18px;
     margin: 0 2px;
   }
-}
+
 
 /* ==========================================================================
 Bootstrap override
