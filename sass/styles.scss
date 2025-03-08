@@ -578,7 +578,7 @@ Features-stack
   }
 
   .time {
-    font-size: 13px;
+    font-size: 15px;
     font-style: italic;
     text-transform: lowercase;
     color: $txt-primary;
@@ -925,4 +925,20 @@ body.modal-open {
 }
 .modal-body {
   padding:25px;
+}
+
+
+/* Override Bootstrap styles */
+p {
+    font-size: 17px;  /* Set the font size */
+    color: #333333;   /* Set the font color */
+}
+
+ul {
+    font-size: 18px; /* Set the font size for the unordered list */
+}
+
+li { color: #333333;   /* Set the font color */
+       
+    font-size: 17px; /* Set the font size for list items */
 }
